@@ -1,11 +1,10 @@
 import express from "express";
-import schema from "./graphql/schema.ts";
 import rootValue from "./graphql/resolver.ts";
 import { ruruHTML } from "ruru/server";
 import { createHandler } from "graphql-http/lib/use/express";
 import cors from "cors";
 import mongoose from "mongoose";
-import Post from "./database/schema.ts";
+import schema from "./graphql/index.ts";
 
 const app = express();
 const PORT = 4000 || "environmental variable";

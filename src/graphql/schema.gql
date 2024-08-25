@@ -1,0 +1,21 @@
+input postInput {
+  content: String!
+  title: String!
+  author: String!
+}
+
+type Post {
+  _id: ID!
+  title: String
+  author: String
+  content: String
+}
+
+type Query {
+  hello: String
+  getPosts: [Post]
+}
+
+type Mutation {
+  createPost(post: postInput): Post!
+}
