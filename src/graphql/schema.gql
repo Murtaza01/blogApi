@@ -1,3 +1,12 @@
+type Query {
+  getPosts: [Post]
+  getPost(id:String): Post!
+}
+
+type Mutation {
+  createPost(data: postInput): Post!
+}
+
 input postInput {
   content: String!
   title: String!
@@ -9,13 +18,4 @@ type Post {
   title: String
   author: String
   content: String
-}
-
-type Query {
-  hello: String
-  getPosts: [Post]
-}
-
-type Mutation {
-  createPost(post: postInput): Post!
 }
